@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accueil - Mon Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="text-gray-900 bg-white">
+
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Mon Portfolio</h1>
+        <nav class="space-x-4">
+            <a href="index.html" class="hover:text-blue-600">Accueil</a>
+            <a href="about.html" class="hover:text-blue-600">À propos</a>
+            <a href="portfolio.html" class="hover:text-blue-600">Portfolio</a>
+        </nav>
+    </div>
+</header>
+
+<section class="h-screen bg-cover bg-center flex items-center justify-center text-center" style="background-image: url('assets/images/header-bg.jpg');">
+    <div class="bg-black bg-opacity-60 p-8 rounded text-white max-w-xl">
+        <h2 class="text-4xl font-bold mb-2">Bonjour, je suis Milad Alizadeh</h2>
+        <p class="text-xl mb-4">Développeur Full-Stack & Étudiant passionné</p>
+        <p class="text-lg italic">"Je me forme aujourd’hui pour bâtir les solutions technologiques de demain, en quête d’un environnement d’excellence où m’investir pleinement."</p>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8">Découvrez-en plus</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="about.html" class="block bg-white shadow-md hover:shadow-xl transition rounded-lg p-6">
+                <h4 class="text-2xl font-semibold mb-2">À propos de moi</h4>
+                <p class="text-gray-600">Fort d'expériences diverses, j'ai acquis des compétences variées, qui me permettent de les appliquer dans ma passion.</p>
+            </a>
+
+            <a href="portfolio.html" class="block bg-white shadow-md hover:shadow-xl transition rounded-lg p-6">
+                <h4 class="text-2xl font-semibold mb-2">Mes projets</h4>
+                <p class="text-gray-600">Python -> Quizify</p>
+                <p class="text-gray-600">TypeScript -> Juste Prix & Le Compte est bon</p>
+                <p class="text-gray-600">Docker -> Compose ton vote</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center text-sm text-gray-500 py-6">
+    © 2025 Milad Alizadeh - Portfolio personnel
+</footer>
+
+</body>
+</html>
