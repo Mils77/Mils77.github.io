@@ -36,7 +36,8 @@
     }
   </style>
 </head>
-<body class="text-gray-900 transition duration-300">
+
+<body class="pt-20 text-gray-900 transition duration-300">
 
   <header class="shadow-md fixed top-0 left-0 w-full z-10 p-4">
     <div class="container mx-auto flex justify-between items-center">
@@ -49,8 +50,63 @@
       </nav>
     </div>
   </header>
-  
-</body>
-<script src="index.js"></script>
 
+  <main class="p-6">
+    <h2 class="text-3xl font-bold mb-8 text-center">Mes Projets Académiques</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card p-4 rounded-lg shadow-lg bg-white cursor-pointer" onclick="openModal('Quizify', 'Description détaillée du Quizify...')">
+        <img src="projet-a.jpg" alt="Quizify" class="rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Quizify</h3>
+        <p class="mb-4">Développement d'un quiz en Python, Programmation orientée objet, Gestion avancée de fichiers (CSV, JSON).</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">En savoir plus</button>
+      </div>
+
+      <div class="card p-4 rounded-lg shadow-lg bg-white cursor-pointer" onclick="openModal('Juste Prix et le Compte est Bon', 'Description détaillée du Juste Prix et le Compte est Bon...')">
+        <img src="projet-b.jpg" alt="Juste Prix et le Compte est Bon" class="rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Juste Prix et le Compte est Bon</h3>
+        <p class="mb-4">Création de mini-jeux en TypeScript à partir de valeurs aléatoires, gestion de conditions et de listes.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">En savoir plus</button>
+      </div>
+
+      <div class="card p-4 rounded-lg shadow-lg bg-white cursor-pointer" onclick="openModal('Compose ton vote', 'Description détaillée du Compose ton vote...')">
+        <img src="projet-c.jpg" alt="Compose ton vote" class="rounded mb-4">
+        <h3 class="text-xl font-bold mb-2">Compose ton vote</h3>
+        <p class="mb-4">Création d'un localhost de gestion de vote avec plusieurs Docker et un docker-compose.</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">En savoir plus</button>
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <h3 class="text-2xl font-semibold mb-4 text-center">Galerie de Projets</h3>
+      <div class="overflow-x-auto whitespace-nowrap space-x-4 flex">
+        <img src="projet-a.jpg" alt="Quizify" class="w-64 h-40 object-cover rounded shadow-lg">
+        <img src="projet-b.jpg" alt="Juste Prix et le Compte est Bon" class="w-64 h-40 object-cover rounded shadow-lg">
+        <img src="projet-c.jpg" alt="Compose ton vote" class="w-64 h-40 object-cover rounded shadow-lg">
+      </div>
+    </div>
+  </main>
+
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="modal-content bg-white p-6 rounded-lg w-11/12 md:w-1/2 relative">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+      <h3 id="modalTitle" class="text-2xl font-bold mb-4"></h3>
+      <p id="modalDesc" class="text-lg"></p>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script>
+    function openModal(title, description) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = description;
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modal').classList.add('flex');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+      document.getElementById('modal').classList.remove('flex');
+    }
+  </script>
+</body>
 </html>
