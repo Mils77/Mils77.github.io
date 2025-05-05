@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>À propos - Mon Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <h1 class="text-4xl font-bold animate__animated animate__fadeInDown">Bienvenue sur mon portfolio</h1>
+  <section class="animate__animated animate__zoomIn animate__delay-1s">
+    <button class="transition duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-500">
+      En savoir plus
+    </button>    
+  </section>  
 </head>
 <body class="text-gray-800 bg-white">
 
@@ -16,6 +23,10 @@
         <a href="index.html" class="hover:text-blue-600">Accueil</a>
         <a href="about.html" class="text-blue-600 font-semibold">À propos</a>
         <a href="portfolio.html" class="hover:text-blue-600">Portfolio</a>
+        <button id="themeToggle" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded">
+          🌞 / 🌙
+        </button>
+        
       </nav>
     </div>
   </header>
@@ -121,10 +132,22 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="text-center text-sm text-gray-500 py-8 mt-12">
     © 2025 Milad Alizadeh
   </footer>
-
+  <script>
+    
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  
+    
+    document.getElementById('themeToggle')?.addEventListener('click', () => {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+  
 </body>
 </html>
