@@ -46,6 +46,7 @@
         <a href="index.html">Accueil</a>
         <a href="about.html">À propos</a>
         <a href="projet.html">Portfolio</a>
+        <a href="interactivite.html">Contact</a>
         <button id="themeToggle" class="px-4 py-2 rounded">🌞 / 🌙</button>
       </nav>
     </div>
@@ -55,34 +56,30 @@
     <h2 class="text-3xl font-bold mb-8 text-center">Mes Projets Académiques</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card p-4 rounded-lg shadow-lg bg-white cursor-pointer" onclick="openModal('Quizify', 'Description détaillée du Quizify...')">
-        <img src="projet-a.jpg" alt="Quizify" class="rounded mb-4">
         <h3 class="text-xl font-bold mb-2">Quizify</h3>
         <p class="mb-4">Développement d'un quiz en Python, Programmation orientée objet, Gestion avancée de fichiers (CSV, JSON).</p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded">En savoir plus</button>
+        <button disabled class="bg-blue-500 text-white px-4 py-2 rounded opacity-50 cursor-not-allowed">
+          En savoir plus        
+          <span class="text-sm text-gray-200 block mt-1">Technologies : Python, CSV, JSON</span>
+          <span class="text-sm text-gray-200 block">Technique de Programmation : POO</span>
+        </button>        
       </div>
 
       <div class="card p-4 rounded-lg shadow-lg bg-white cursor-pointer" onclick="openModal('Juste Prix et le Compte est Bon', 'Description détaillée du Juste Prix et le Compte est Bon...')">
-        <img src="projet-b.jpg" alt="Juste Prix et le Compte est Bon" class="rounded mb-4">
         <h3 class="text-xl font-bold mb-2">Juste Prix et le Compte est Bon</h3>
         <p class="mb-4">Création de mini-jeux en TypeScript à partir de valeurs aléatoires, gestion de conditions et de listes.</p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded">En savoir plus</button>
+        <button disabled class="bg-blue-500 text-white px-4 py-2 rounded opacity-50 cursor-not-allowed">
+          En savoir plus 
+          <span class="text-sm text-gray-200 block mt-1">Technologies : TypeScript</span>
       </div>
 
       <div class="card p-4 rounded-lg shadow-lg bg-white cursor-pointer" onclick="openModal('Compose ton vote', 'Description détaillée du Compose ton vote...')">
-        <img src="projet-c.jpg" alt="Compose ton vote" class="rounded mb-4">
         <h3 class="text-xl font-bold mb-2">Compose ton vote</h3>
         <p class="mb-4">Création d'un localhost de gestion de vote avec plusieurs Docker et un docker-compose.</p>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded">En savoir plus</button>
-      </div>
+        <button disabled class="bg-blue-500 text-white px-4 py-2 rounded opacity-50 cursor-not-allowed">
+          En savoir plus 
+          <span class="text-sm text-gray-200 block mt-1">Technologies : Docker</span>
     </div>
-
-    <div class="mt-16">
-      <h3 class="text-2xl font-semibold mb-4 text-center">Galerie de Projets</h3>
-      <div class="overflow-x-auto whitespace-nowrap space-x-4 flex">
-        <img src="projet-a.jpg" alt="Quizify" class="w-64 h-40 object-cover rounded shadow-lg">
-        <img src="projet-b.jpg" alt="Juste Prix et le Compte est Bon" class="w-64 h-40 object-cover rounded shadow-lg">
-        <img src="projet-c.jpg" alt="Compose ton vote" class="w-64 h-40 object-cover rounded shadow-lg">
-      </div>
     </div>
   </main>
 
